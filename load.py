@@ -14,7 +14,7 @@ def create_table(conn):
             indicator TEXT
         )
     """)
-    conn.commit
+    conn.commit()
 
 def load_data(conn, df):
     df.to_sql('indicators', conn, if_exists='replace', index=False)
